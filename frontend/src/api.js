@@ -1,7 +1,7 @@
 // Base URL of the Flask backend. In production this is set as a Vercel
 // environment variable (VITE_API_URL); in local dev it falls back to Flask's
 // port.
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+const API_URL = import.meta.env.VITE_API_URL || "https://loan-calculator-fxxl.onrender.com";
 
 export async function calculateLoan({ principal, annualRate, tenureMonths }) {
   const response = await fetch(`${API_URL}/api/calculate`, {
